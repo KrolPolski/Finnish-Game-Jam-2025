@@ -34,7 +34,8 @@ func _physics_process(delta: float):
 		mob_kill_list = self.get_overlapping_bodies()
 	if (mob_kill_list):
 		for mob in mob_kill_list:
-			mob.queue_free()
+			if mob.is_in_group("mob"):
+				mob.queue_free()
 		mob_kill_list = null
 #func _on_area_entered(area: Area2D) -> void:
 	#print(area.name)
