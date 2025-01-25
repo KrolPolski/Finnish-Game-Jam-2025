@@ -1,9 +1,18 @@
 extends CharacterBody2D
 
+
 var SPEED = 2
 var FLOAT_SPEED = -300
 var dir = 1
 var is_floating = false
+
+@export var speed: float = 200
+var right: Vector2 = Vector2.RIGHT  # Start moving right
+var left: Vector2 = Vector2.LEFT
+var direction = right 
+var framecount = 0
+var collision_vector
+var angle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,21 +21,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$AnimatedSprite2D.play("enemy_sprite")
+	
 func _physics_process(delta: float):
 	
-	if !is_floating:
-		position.x += SPEED * dir
-		if position.x >= 450:
-			dir = -1
-		if position.x <= 0:
-			dir = 1
-		if not is_on_floor():
-			velocity += get_gravity() * delta
-	else:
-		velocity.x = 0
-		velocity.y = FLOAT_SPEED
-	move_and_slide()
+velocity = direction * speed
+	if not is_on_floor():
+		velocity += get_gravity() * delta * 10
+	if move_and_slide():
+	#direction += collision_vector
+		if not is_on_floor_only():
+			if direction == left:
+				direction = right
+				$AnimatedSprite2D.flip_h = true
+			else:
+				direction = left
+				$AnimatedSprite2D.flip_h = false
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -35,3 +45,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		velocity.y = FLOAT_SPEED
 		is_floating = true
 		set_collision_mask_value(4, false)
+
+
