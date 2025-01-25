@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://lgynah0lnmuw"]
+
+[ext_resource type="Script" path="res://player_movement.gd" id="1_2vfpm"]
+[ext_resource type="Texture2D" uid="uid://cbf01n8p11krm" path="res://icon.svg" id="1_hfpfo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8xtw"]
+size = Vector2(1289.25, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1x70"]
+size = Vector2(343, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnqob"]
+size = Vector2(344.625, 201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2epem"]
+size = Vector2(346, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4oe"]
+size = Vector2(123, 120.5)
+
+[node name="Level" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(645.375, 677)
+shape = SubResource("RectangleShape2D_f8xtw")
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_left = 1.0
+offset_top = 629.0
+offset_right = 1290.0
+offset_bottom = 721.0
+color = Color(0.70397, 0.401718, 0.144034, 1)
+
+[node name="Platform" type="ColorRect" parent="."]
+offset_left = 750.0
+offset_top = 420.0
+offset_right = 1099.0
+offset_bottom = 465.0
+color = Color(0.270675, 0.306784, 0.651463, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platform"]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/StaticBody2D"]
+position = Vector2(174.5, 22)
+shape = SubResource("RectangleShape2D_s1x70")
+
+[node name="Under_platform" type="Area2D" parent="Platform" groups=["under_platform"]]
+position = Vector2(177, 118)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Under_platform" groups=["under_platform"]]
+position = Vector2(-2, -15)
+shape = SubResource("RectangleShape2D_qnqob")
+
+[node name="Over_platform" type="Area2D" parent="Platform" groups=["over_platform"]]
+position = Vector2(175, -54)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Over_platform" groups=["over_platform"]]
+position = Vector2(-1, 32)
+shape = SubResource("RectangleShape2D_2epem")
+debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(300, 500)
+collision_mask = 3
+script = ExtResource("1_2vfpm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_hfpfo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 63.9, 59, 64, -61.1)
+
+[node name="player_area" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/player_area"]
+position = Vector2(0.5, -0.25)
+shape = SubResource("RectangleShape2D_0b4oe")
+
+[connection signal="area_entered" from="Player/player_area" to="Player" method="_on_player_area_area_entered"]
+[connection signal="area_exited" from="Player/player_area" to="Player" method="_on_player_area_area_exited"]
