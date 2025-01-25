@@ -63,10 +63,10 @@ top_level = true
 script = ExtResource("5_3cynp")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mob"]
-position = Vector2(246, 245.25)
+position = Vector2(347, 199.25)
 scale = Vector2(0.265625, 0.253906)
 texture = ExtResource("4_8bqn7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mob"]
-position = Vector2(247, 241)
+position = Vector2(348, 195)
 shape = SubResource("RectangleShape2D_hn5fo")

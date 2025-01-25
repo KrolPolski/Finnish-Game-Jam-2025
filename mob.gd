@@ -12,9 +12,9 @@ func _process(delta: float) -> void:
 	pass
 func _physics_process(delta: float):
 	position.x += SPEED
-	if position.x >= 550:
+	if position.x >= 450:
 		SPEED = -2
-	if position.x <= 100:
+	if position.x <= 0:
 		SPEED = +2
 	if not is_on_floor():
 		velocity += get_gravity() * delta
