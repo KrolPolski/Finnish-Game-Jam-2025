@@ -1,10 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmfrpqlcr1vws"]
+[gd_scene load_steps=7 format=3 uid="uid://cmfrpqlcr1vws"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_c6a7m"]
-[ext_resource type="Texture2D" uid="uid://bmf7blihblkv5" path="res://icon.svg" id="2_n7dok"]
+[ext_resource type="Texture2D" uid="uid://cxr6lu637cdas" path="res://assets/character_sprites/enemy_sprite_3.PNG" id="3_3e27u"]
+[ext_resource type="Texture2D" uid="uid://dd0dej8qna5ce" path="res://assets/character_sprites/enemy_sprite_1.PNG" id="4_voowq"]
+[ext_resource type="Texture2D" uid="uid://c33vy7dw2k5gj" path="res://assets/character_sprites/enemy_sprite2.PNG" id="5_oyrsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hn5fo"]
 size = Vector2(30.875, 29.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_411or"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_oyrsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_voowq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3e27u")
+}],
+"loop": true,
+"name": &"enemy_sprite",
+"speed": 5.0
+}]
 
 [node name="Mob" type="CharacterBody2D"]
 top_level = true
@@ -12,11 +31,12 @@ position = Vector2(0, -1)
 script = ExtResource("1_c6a7m")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(394, 200)
-scale = Vector2(0.265625, 0.253906)
-texture = ExtResource("2_n7dok")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mob"]]
 position = Vector2(394, 200)
 shape = SubResource("RectangleShape2D_hn5fo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(393, 199)
+sprite_frames = SubResource("SpriteFrames_411or")
+animation = &"enemy_sprite"
+flip_h = true
