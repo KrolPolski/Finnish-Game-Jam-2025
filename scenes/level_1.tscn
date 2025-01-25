@@ -1,10 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=11 format=4 uid="uid://clo6cylv8dslo"]
 
 [ext_resource type="Texture2D" uid="uid://bewvwbn2pcikw" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
 [ext_resource type="Texture2D" uid="uid://x88oknbs6155" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="Texture2D" uid="uid://bmf7blihblkv5" path="res://icon.svg" id="4_8bqn7"]
-[ext_resource type="Script" path="res://mob.gd" id="5_3cynp"]
+[ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -26,9 +26,6 @@ sources/0 = SubResource("TileSetAtlasSource_o608d")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kr7il"]
 size = Vector2(78.5, 75)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hn5fo"]
-size = Vector2(33.75, 33.5)
-
 [node name="Level 1" type="Node2D"]
 
 [node name="Tilemaps" type="Node" parent="."]
@@ -48,6 +45,7 @@ tile_set = SubResource("TileSet_rqsky")
 [node name="Portal2" type="Area2D" parent="."]
 top_level = true
 script = ExtResource("3_lbnyv")
+mob_scene = ExtResource("4_mkim1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal2"]
 position = Vector2(373.75, 43.5)
@@ -58,15 +56,12 @@ position = Vector2(373, 45)
 scale = Vector2(0.605469, 0.597656)
 texture = ExtResource("4_8bqn7")
 
-[node name="Mob" type="CharacterBody2D" parent="."]
-top_level = true
-script = ExtResource("5_3cynp")
+[node name="MobTimer" type="Timer" parent="Portal2"]
+autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Mob"]
-position = Vector2(347, 199.25)
-scale = Vector2(0.265625, 0.253906)
-texture = ExtResource("4_8bqn7")
+[node name="PortalTimer" type="Timer" parent="Portal2"]
+wait_time = 20.0
+autostart = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob"]
-position = Vector2(348, 195)
-shape = SubResource("RectangleShape2D_hn5fo")
+[node name="Mob" parent="." instance=ExtResource("4_mkim1")]
+position = Vector2(1, -170)
