@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx05tafwjurew"]
 
-[ext_resource type="Texture2D" uid="uid://lootb2wabas2" path="res://assets/sprites/bubble_1.png" id="1_plpnl"]
 [ext_resource type="Script" path="res://bubble.gd" id="1_s1ay2"]
+[ext_resource type="Texture2D" uid="uid://juvteptdyuh2" path="res://assets/character_sprites/bubble_sprite_1.PNG" id="2_cscum"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntcyj"]
 radius = 3.89573
 
 [node name="Bubble" type="Area2D" groups=["bubble"]]
+top_level = true
 position = Vector2(200, 108)
-scale = Vector2(2.96263, 2.38455)
+scale = Vector2(0.839037, 0.717785)
 collision_layer = 4
 collision_mask = 8
 script = ExtResource("1_s1ay2")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_plpnl")
+texture = ExtResource("2_cscum")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ntcyj")

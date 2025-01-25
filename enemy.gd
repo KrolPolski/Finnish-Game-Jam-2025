@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_dir * SPEED
 	else:
 		velocity.y = -1 * SPEED
-	move_and_slide()
+#	move_and_slide()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
