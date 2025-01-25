@@ -1,10 +1,15 @@
-[gd_scene load_steps=12 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=18 format=4 uid="uid://clo6cylv8dslo"]
 
 [ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
 [ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="Texture2D" uid="uid://b8tih2useykxt" path="res://icon.svg" id="4_8bqn7"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
+[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.PNG" id="6_gebfy"]
+[ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_urhyx"]
+[ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_rom5f"]
+[ext_resource type="Texture2D" uid="uid://cfnr0kgxx50q1" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_ue5ku"]
+[ext_resource type="Texture2D" uid="uid://ccwsacmv278re" path="res://assets/character_sprites/portal_sprite_5.PNG" id="10_gmiu3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -23,8 +28,31 @@ texture = ExtResource("2_xi0ms")
 [sub_resource type="TileSet" id="TileSet_rqsky"]
 sources/0 = SubResource("TileSetAtlasSource_o608d")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kr7il"]
-size = Vector2(78.5, 75)
+[sub_resource type="CircleShape2D" id="CircleShape2D_fyneq"]
+radius = 29.203
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwvrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_gebfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_urhyx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rom5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ue5ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gmiu3")
+}],
+"loop": true,
+"name": &"portal_sprite",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4ot2"]
 size = Vector2(24.6875, 860.625)
@@ -52,10 +80,11 @@ mob_scene = ExtResource("4_mkim1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portal2"]
 position = Vector2(373.75, 43.5)
-shape = SubResource("RectangleShape2D_kr7il")
+shape = SubResource("CircleShape2D_fyneq")
 one_way_collision = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Portal2"]
+visible = false
 position = Vector2(410, 44)
 scale = Vector2(0.605469, 0.597656)
 texture = ExtResource("4_8bqn7")
@@ -67,6 +96,11 @@ autostart = true
 [node name="PortalTimer" type="Timer" parent="Portal2"]
 wait_time = 20.0
 autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal2"]
+position = Vector2(373, 44)
+sprite_frames = SubResource("SpriteFrames_xwvrv")
+animation = &"portal_sprite"
 
 [node name="Mob" parent="." instance=ExtResource("4_mkim1")]
 position = Vector2(1, -170)

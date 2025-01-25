@@ -21,7 +21,7 @@ func _on_Portal_timer_timeout():
 	canSpawn = !canSpawn
 	
 func _process(delta: float) -> void:
-	pass
+	$AnimatedSprite2D.play("portal_sprite")
 	
 func _physics_process(delta: float):
 	position.x += SPEED
