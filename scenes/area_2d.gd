@@ -5,6 +5,7 @@ extends Area2D
 # Called when the node enters the scene tree for the first time.
 var SPEED = 2
 var canSpawn = true
+var mob_kill_list = null
 func _ready() -> void:
 	$MobTimer.timeout.connect(_on_timer_timeout)
 	$PortalTimer.timeout.connect(_on_Portal_timer_timeout)
@@ -25,7 +26,18 @@ func _process(delta: float) -> void:
 	
 func _physics_process(delta: float):
 	position.x += SPEED
-	if position.x >= 400:
+	if position.x >= 450:
 		SPEED -=2
 	if position.x <= 0:
 		SPEED +=2
+	if !canSpawn:
+		mob_kill_list = self.get_overlapping_bodies()
+	if (mob_kill_list):
+		for mob in mob_kill_list:
+			mob.queue_free()
+		mob_kill_list = null
+#func _on_area_entered(area: Area2D) -> void:
+	#print(area.name)
+	#if !canSpawn and area.is_in_group("mob"):
+		#print("Time to destroy a mob")
+		#area.queue_free()
