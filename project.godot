@@ -43,6 +43,10 @@ climb_down={
 ]
 }
 
+[dotnet]
+
+project/assembly_name="The Lab Incident"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
