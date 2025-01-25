@@ -1,7 +1,12 @@
 extends CharacterBody2D
 
-var SPEED = 2
-
+@export var speed: float = 200
+var right: Vector2 = Vector2.RIGHT  # Start moving right
+var left: Vector2 = Vector2.LEFT
+var direction = right 
+var framecount = 0
+var collision_vector
+var angle
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,11 +16,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 func _physics_process(delta: float):
-	position.x += SPEED
-	if position.x >= 450:
-		SPEED = -2
-	if position.x <= 0:
-		SPEED = +2
+	velocity = direction * speed
 	if not is_on_floor():
-		velocity += get_gravity() * delta
-	move_and_slide()
+		velocity += get_gravity() * delta * 10
+	if move_and_slide():
+	#direction += collision_vector
+		if not is_on_floor_only():
+			if direction == left:
+				direction = right
+			else:
+				direction = left
+	
+	
