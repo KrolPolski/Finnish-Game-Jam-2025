@@ -14,7 +14,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	$AnimatedSprite2D.play("enemy_sprite")
+	
 func _physics_process(delta: float):
 	velocity = direction * speed
 	if not is_on_floor():
@@ -24,7 +25,9 @@ func _physics_process(delta: float):
 		if not is_on_floor_only():
 			if direction == left:
 				direction = right
+				$AnimatedSprite2D.flip_h = true
 			else:
 				direction = left
+				$AnimatedSprite2D.flip_h = false
 	
 	
