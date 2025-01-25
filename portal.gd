@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 	
 func _physics_process(delta: float):
 	position.x += SPEED
-	if position.x >= 950:
+	if position.x >= 400:
 		SPEED -=2
 	if position.x <= 0:
 		SPEED +=2
