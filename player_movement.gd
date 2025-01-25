@@ -29,18 +29,6 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	if Input.is_action_just_pressed("enter"):
-		print("********")
-		print("IS UNDER PLATFORM:")
-		print(is_under_platform)
-		print("IS OVER PLATFORM:")
-		print(is_over_platform)
-		print("IS CLIMBING UP:")
-		print(is_climbing_up)
-		print("IS CLIMBING DOWN:")
-		print(is_climbing_down)
-		print("********")
-
 	# Handle climb.
 	if Input.is_action_just_pressed("climb_up") and is_under_platform and !is_climbing_up and !is_climbing_down:
 		is_climbing_up = true
@@ -80,11 +68,9 @@ func _on_player_area_area_entered(area: Area2D) -> void:
 	if area.is_in_group("under_platform"):
 		is_under_platform = true
 		under_count += 1
-		print("UNDER PLATFORM")
 	if area.is_in_group("over_platform"):
 		is_over_platform = true
 		over_count += 1
-		print("OVER PLATFORM")
 
 
 func _on_player_area_area_exited(area: Area2D) -> void:
@@ -92,13 +78,11 @@ func _on_player_area_area_exited(area: Area2D) -> void:
 		under_count -= 1
 		if under_count <= 0:
 			is_under_platform = false
-		print("UNDER PLATFORM STOP")
 		if is_climbing_up:
 			velocity.y = 0
 			is_climbing_up = false
 			set_collision_mask_value(2, true)
 	if area.is_in_group("over_platform"):
-		print("OVER PLATFORM STOP")
 		over_count -= 1
 		if over_count <= 0:
 			is_over_platform = false

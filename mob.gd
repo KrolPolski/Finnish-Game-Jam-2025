@@ -1,12 +1,10 @@
 extends CharacterBody2D
 
 
-var SPEED = 2
 var FLOAT_SPEED = -300
-var dir = 1
 var is_floating = false
 
-@export var speed: float = 200
+@export var speed: float = 150
 var right: Vector2 = Vector2.RIGHT  # Start moving right
 var left: Vector2 = Vector2.LEFT
 var direction = right 
@@ -25,18 +23,21 @@ func _process(delta: float) -> void:
 	
 func _physics_process(delta: float):
 	
-velocity = direction * speed
-	if not is_on_floor():
-		velocity += get_gravity() * delta * 10
-	if move_and_slide():
-	#direction += collision_vector
-		if not is_on_floor_only():
-			if direction == left:
-				direction = right
-				$AnimatedSprite2D.flip_h = true
-			else:
-				direction = left
-				$AnimatedSprite2D.flip_h = false
+	if !is_floating:
+		velocity = direction * speed
+		if not is_on_floor():
+			velocity += get_gravity() * delta * 10
+		if move_and_slide():
+		#direction += collision_vector
+			if not is_on_floor_only():
+				if direction == left:
+					direction = right
+					$AnimatedSprite2D.flip_h = true
+				else:
+					direction = left
+					$AnimatedSprite2D.flip_h = false
+	else:
+		move_and_slide()
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -44,6 +45,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		velocity.x = 0
 		velocity.y = FLOAT_SPEED
 		is_floating = true
-		set_collision_mask_value(4, false)
-
-
+		set_collision_mask_value(1, false)
+		set_collision_mask_value(2, false)
