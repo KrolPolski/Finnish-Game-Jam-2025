@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
 [ext_resource type="Texture2D" uid="uid://cdq8suwturjp1" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
+
 [ext_resource type="Texture2D" uid="uid://j80qq37kgg14" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
 [ext_resource type="Texture2D" uid="uid://brys623oly375" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
 [ext_resource type="Texture2D" uid="uid://dtxmusctjreb5" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_5ae38"]
@@ -20,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bfi5h6hmgwqhi" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
 [ext_resource type="Texture2D" uid="uid://g8q4eh7e6j2y" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
 [ext_resource type="Texture2D" uid="uid://b34uijsdykysj" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="PackedScene" uid="uid://chsf28pg5vgvo" path="res://hud.tscn" id="20_x1vpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")

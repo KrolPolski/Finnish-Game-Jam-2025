@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4ah55exjfmm1"]
+
+[ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_aq7he"]
+[ext_resource type="Texture2D" uid="uid://c56ho2dnwkyis" path="res://assets/tilesets/title_screen.png" id="2_irats"]
+[ext_resource type="FontFile" uid="uid://deta13sbytagj" path="res://assets/fonts/Pixica Fonts/Pixica-Regular.ttf" id="3_24rdx"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_aq7he")
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(2.37037, 1.94595)
+texture = ExtResource("2_irats")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 552.0
+offset_top = 600.0
+offset_right = 731.0
+offset_bottom = 647.0
+theme_override_colors/font_color = Color(0.439216, 0.8, 0, 1)
+theme_override_fonts/font = ExtResource("3_24rdx")
+theme_override_font_sizes/font_size = 27
+text = "PRESS ENTER 
+TO START"
+horizontal_alignment = 1
