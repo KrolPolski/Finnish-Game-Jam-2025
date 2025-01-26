@@ -117,4 +117,18 @@ offset_right = 695.0
 offset_bottom = 350.0
 theme_override_fonts/font = ExtResource("2_getvw")
 theme_override_font_sizes/font_size = 48
-text = "You died!"
+text = "You died!
+
+Your score was"
+horizontal_alignment = 1
+
+[node name="FinalScore" type="Label" parent="."]
+offset_left = 656.0
+offset_top = 456.0
+offset_right = 696.0
+offset_bottom = 479.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.235294, 0, 1)
+theme_override_fonts/font = ExtResource("3_kh6w7")
+theme_override_font_sizes/font_size = 36
+text = "0"
