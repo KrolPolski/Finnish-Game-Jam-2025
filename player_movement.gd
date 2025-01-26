@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 		instance.spawn_pos.y = global_position.y
 		instance.add_to_group("bubble")
 		main.add_child.call_deferred(instance)
+		$AnimatedSprite2D.play("player_shoot")
 		
 	
 
