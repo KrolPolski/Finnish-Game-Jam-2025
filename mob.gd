@@ -38,6 +38,12 @@ func _physics_process(delta: float):
 					$AnimatedSprite2D.flip_h = false
 	else:
 		move_and_slide()
+		if (position.y <= 30):
+			is_floating = false
+			set_collision_mask_value(1, true)
+			set_collision_mask_value(2, true)
+			
+	
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
