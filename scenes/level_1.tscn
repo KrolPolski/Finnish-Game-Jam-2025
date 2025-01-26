@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=30 format=4 uid="uid://clo6cylv8dslo"]
 
 [ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
 [ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
@@ -11,7 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_rom5f"]
 [ext_resource type="Texture2D" uid="uid://cfnr0kgxx50q1" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_ue5ku"]
 [ext_resource type="Texture2D" uid="uid://ccwsacmv278re" path="res://assets/character_sprites/portal_sprite_5.PNG" id="10_gmiu3"]
+[ext_resource type="Texture2D" uid="uid://dxkdnhlp27p0f" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
 [ext_resource type="Texture2D" uid="uid://dng46w2qobh7x" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
+[ext_resource type="Texture2D" uid="uid://cxgf4ca15vibu" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
+[ext_resource type="Texture2D" uid="uid://b7udvo4usfkrw" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -57,7 +60,30 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p0mf"]
-size = Vector2(30, 32)
+size = Vector2(19.0126, 37.7793)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhqvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ayfcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lx1n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mh742")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jtbev")
+}],
+"loop": true,
+"name": &"player_movement",
+"speed": 11.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00mx3"]
+radius = 9.36279
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f417m"]
 size = Vector2(348.279, 47.1943)
@@ -133,17 +159,26 @@ script = ExtResource("6_dhlg7")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
+visible = false
 texture = ExtResource("7_ayfcc")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
-position = Vector2(0.999992, -0.338383)
-scale = Vector2(0.240234, 0.245613)
-polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 60.1109, 64.5876, 64, -61.1)
 
 [node name="player_area" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/player_area"]
+position = Vector2(-5.49368, -2.88965)
 shape = SubResource("RectangleShape2D_7p0mf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(-3.3186, 0)
+scale = Vector2(0.792587, 1)
+sprite_frames = SubResource("SpriteFrames_mhqvf")
+animation = &"player_movement"
+frame = 1
+frame_progress = 0.576076
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-5.35018, -0.871171)
+shape = SubResource("CapsuleShape2D_00mx3")
 
 [node name="Platform" type="ColorRect" parent="."]
 offset_left = 407.0
