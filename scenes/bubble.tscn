@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cx05tafwjurew"]
 
 [ext_resource type="Script" path="res://bubble.gd" id="1_s1ay2"]
-[ext_resource type="Texture2D" uid="uid://05jnukp5q37e" path="res://assets/character_sprites/bubble_sprite_1.PNG" id="2_cscum"]
+[ext_resource type="Texture2D" uid="uid://b4yygrjsi68dd" path="res://assets/character_sprites/bubble_sprite_1.PNG" id="2_cscum"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntcyj"]
 radius = 3.89573

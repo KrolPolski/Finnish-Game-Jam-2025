@@ -2,8 +2,9 @@ extends Area2D
 
 
 @export var mob_scene: PackedScene
+@export var score = 0
 # Called when the node enters the scene tree for the first time.
-var SPEED = 2
+var SPEED = 1
 var canSpawn = true
 var mob_kill_list = null
 func _ready() -> void:
@@ -30,15 +31,16 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float):
 	position.x += SPEED
 	if position.x >= 870:
-		SPEED -=2
+		SPEED -=1
 	if position.x <= 420:
-		SPEED +=2
+		SPEED +=1
 	if !canSpawn:
 		mob_kill_list = self.get_overlapping_bodies()
 	if (mob_kill_list):
 		for mob in mob_kill_list:
 			if mob.is_in_group("mob"):
 				mob.queue_free()
+				score += 100
 		mob_kill_list = null
 #func _on_area_entered(area: Area2D) -> void:
 	#print(area.name)
