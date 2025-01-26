@@ -27,3 +27,8 @@ Each time you send an enemy back through the portal, you gain 100 points.
 Each time you lay a bubble, you lose twenty points. So don't waste them!
 
 ## Build Instructions
+You can play this game either by using the included Linux, Windows, or Mac binaries, or you can run it directly in Godot.
+
+1) Download and install the godot engine from godotengine.org
+2) Import the project
+3) Click Run
