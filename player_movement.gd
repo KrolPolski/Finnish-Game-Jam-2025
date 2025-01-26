@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var health = 10
 
 const SPEED = 200.0
 const CLIMB_VELOCITY = -200.0
@@ -45,6 +46,8 @@ func _physics_process(delta: float) -> void:
 		instance.add_to_group("bubble")
 		main.add_child.call_deferred(instance)
 		$AnimatedSprite2D.play("player_shoot")
+		get_parent().get_node("Portal2").score -= 5
+		print(get_parent().get_node("Portal2").score)
 		
 	
 
@@ -98,3 +101,5 @@ func _on_player_area_area_exited(area: Area2D) -> void:
 			velocity.y = 0
 			is_climbing_down = false
 			set_collision_mask_value(2, true)
+	if area.is_in_group("mob"):
+		health -= 1
