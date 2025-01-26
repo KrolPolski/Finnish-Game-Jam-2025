@@ -1,16 +1,25 @@
-[gd_scene load_steps=25 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=35 format=4 uid="uid://clo6cylv8dslo"]
 
-[ext_resource type="Texture2D" uid="uid://b7oyj8d1fmpwf" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
-[ext_resource type="Texture2D" uid="uid://cix7k8qwp6nub" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
+[ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
+[ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://dcatkymejdwgt" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
+[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
-[ext_resource type="Texture2D" uid="uid://63nn1xlm2st7" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
-[ext_resource type="Texture2D" uid="uid://mqggrcejwk6c" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_urhyx"]
-[ext_resource type="Texture2D" uid="uid://u416b5hpdnpm" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_rom5f"]
-[ext_resource type="Texture2D" uid="uid://cnnttrwn1sph" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_ue5ku"]
-[ext_resource type="Texture2D" uid="uid://dsq4jxkhiw51m" path="res://assets/character_sprites/portal_sprite_5.PNG" id="10_gmiu3"]
+[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.png" id="6_lji51"]
+[ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.png" id="7_asnly"]
+[ext_resource type="Texture2D" uid="uid://cl0kb31nuay68" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
+[ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.png" id="8_5ae38"]
+[ext_resource type="Texture2D" uid="uid://cfnr0kgxx50q1" path="res://assets/character_sprites/portal_sprite_4.png" id="9_o4q1q"]
+[ext_resource type="Texture2D" uid="uid://s3cgmf20cj78" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
+[ext_resource type="Texture2D" uid="uid://bmeejg3s0dxe2" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
+[ext_resource type="Texture2D" uid="uid://bdisuabeutipt" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
+[ext_resource type="Texture2D" uid="uid://dxkdnhlp27p0f" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
+[ext_resource type="Texture2D" uid="uid://dng46w2qobh7x" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
+[ext_resource type="Texture2D" uid="uid://dvxpj0mcrehxg" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
+[ext_resource type="Texture2D" uid="uid://cxgf4ca15vibu" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
+[ext_resource type="Texture2D" uid="uid://b7udvo4usfkrw" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
+[ext_resource type="Texture2D" uid="uid://b70rru1mwvv0g" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -36,27 +45,72 @@ radius = 29.203
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_2et8h")
+"texture": ExtResource("6_lji51")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_urhyx")
+"texture": ExtResource("7_asnly")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_rom5f")
+"texture": ExtResource("8_5ae38")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_ue5ku")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_gmiu3")
+"texture": ExtResource("9_o4q1q")
 }],
 "loop": true,
 "name": &"portal_sprite",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_eh26s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sixkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ji7kh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_06o7i")
+}],
+"loop": true,
+"name": &"portal_sprite_orange",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p0mf"]
-size = Vector2(30, 32)
+size = Vector2(19.0126, 37.7793)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhqvf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ayfcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_lx1n1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mh742")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jtbev")
+}],
+"loop": true,
+"name": &"player_movement",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_yk8us")
+}],
+"loop": true,
+"name": &"player_shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00mx3"]
+radius = 9.36279
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f417m"]
 size = Vector2(348.279, 47.1943)
@@ -88,6 +142,7 @@ tile_set = SubResource("TileSet_1fugo")
 collision_enabled = false
 
 [node name="Sky" type="TileMapLayer" parent="Tilemaps"]
+visible = false
 position = Vector2(362, 721)
 scale = Vector2(2.8, 2.8)
 tile_map_data = PackedByteArray("AAAAAPf/AAAAAAAAAAABAPf/AAAAAAAAAAACAPf/AAAAAAAAAAADAPf/AAAAAAAAAAAEAPf/AAAAAAAAAAAFAPf/AAAAAAAAAAAGAPf/AAAAAAAAAAAHAPf/AAAAAAAAAAAIAPf/AAAAAAAAAAAJAPf/AAAAAAAAAAAKAPf/AAAAAAAAAAALAPf/AAAAAAAAAAALAPb/AAAAAAAAAAAKAPb/AAAAAAAAAAAJAPb/AAAAAAAAAAAIAPb/AAAAAAAAAAAHAPb/AAAAAAAAAAAGAPb/AAAAAAAAAAAFAPb/AAAAAAAAAAAEAPb/AAAAAAAAAAADAPb/AAAAAAAAAAACAPb/AAAAAAAAAAABAPb/AAAAAAAAAAAAAPb/AAAAAAAAAAAAAPX/AAAAAAAAAAABAPX/AAAAAAAAAAACAPX/AAAAAAAAAAADAPX/AAAAAAAAAAAEAPX/AAAAAAAAAAAFAPX/AAAAAAAAAAAGAPX/AAAAAAAAAAAHAPX/AAAAAAAAAAAIAPX/AAAAAAAAAAAJAPX/AAAAAAAAAAAKAPX/AAAAAAAAAAALAPX/AAAAAAAAAAALAPT/AAAAAAAAAAAKAPT/AAAAAAAAAAAJAPT/AAAAAAAAAAAIAPT/AAAAAAAAAAAHAPT/AAAAAAAAAAAGAPT/AAAAAAAAAAAFAPT/AAAAAAAAAAAEAPT/AAAAAAAAAAADAPT/AAAAAAAAAAACAPT/AAAAAAAAAAABAPT/AAAAAAAAAAAAAPT/AAAAAAAAAAAAAPP/AAAAAAAAAAABAPP/AAAAAAAAAAACAPP/AAAAAAAAAAADAPP/AAAAAAAAAAAEAPP/AAAAAAAAAAAFAPP/AAAAAAAAAAAGAPP/AAAAAAAAAAAHAPP/AAAAAAAAAAAIAPP/AAAAAAAAAAAJAPP/AAAAAAAAAAAKAPP/AAAAAAAAAAALAPP/AAAAAAAAAAAAAPL/AAAAAAAAAAABAPL/AAAAAAAAAAACAPL/AAAAAAAAAAADAPL/AAAAAAAAAAAEAPL/AAAAAAAAAAAFAPL/AAAAAAAAAAAGAPL/AAAAAAAAAAAHAPL/AAAAAAAAAAAIAPL/AAAAAAAAAAAJAPL/AAAAAAAAAAAKAPL/AAAAAAAAAAALAPL/AAAAAAAAAAAAAPH/AAAAAAAAAAABAPH/AAAAAAAAAAACAPH/AAAAAAAAAAADAPH/AAAAAAAAAAAEAPH/AAAAAAAAAAAFAPH/AAAAAAAAAAAGAPH/AAAAAAAAAAAHAPH/AAAAAAAAAAAIAPH/AAAAAAAAAAAJAPH/AAAAAAAAAAAKAPH/AAAAAAAAAAALAPH/AAAAAAAAAAAAAPD/AAAAAAAAAAABAPD/AAAAAAAAAAACAPD/AAAAAAAAAAADAPD/AAAAAAAAAAAEAPD/AAAAAAAAAAAFAPD/AAAAAAAAAAAGAPD/AAAAAAAAAAAHAPD/AAAAAAAAAAAIAPD/AAAAAAAAAAAJAPD/AAAAAAAAAAAKAPD/AAAAAAAAAAALAPD/AAAAAAAAAAA=")
@@ -123,8 +178,9 @@ autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal2"]
 sprite_frames = SubResource("SpriteFrames_xwvrv")
-animation = &"portal_sprite"
-metadata/_edit_group_ = true
+
+animation = &"portal_sprite_orange"
+frame_progress = 0.795924
 
 [node name="Mob" parent="." groups=["enemy"] instance=ExtResource("4_mkim1")]
 position = Vector2(420, 20)
@@ -138,17 +194,24 @@ script = ExtResource("6_dhlg7")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
+visible = false
 texture = ExtResource("7_ayfcc")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
-position = Vector2(0.999992, -0.338383)
-scale = Vector2(0.240234, 0.245613)
-polygon = PackedVector2Array(59.1, -64, -59, -64, -63.8, -59, -64, 61, -60.3, 64, 59.6, 64, 60.1109, 64.5876, 64, -61.1)
 
 [node name="player_area" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/player_area"]
+position = Vector2(-5.49368, -2.88965)
 shape = SubResource("RectangleShape2D_7p0mf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(-3.3186, 0)
+scale = Vector2(0.792587, 1)
+sprite_frames = SubResource("SpriteFrames_mhqvf")
+animation = &"player_shoot"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-5.35018, -0.871171)
+shape = SubResource("CapsuleShape2D_00mx3")
 
 [node name="Platform" type="ColorRect" parent="."]
 offset_left = 407.0
@@ -403,9 +466,14 @@ shape = SubResource("RectangleShape2D_y4ot2")
 position = Vector2(906.344, 330.312)
 shape = SubResource("RectangleShape2D_y4ot2")
 
+
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(629, -6)
 shape = SubResource("RectangleShape2D_samh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(632, 176)
+texture = ExtResource("12_qxyaj")
 
 [connection signal="area_entered" from="Player/player_area" to="Player" method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="Player/player_area" to="Player" method="_on_player_area_area_exited"]

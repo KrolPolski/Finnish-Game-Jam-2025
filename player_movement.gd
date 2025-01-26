@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 		instance.spawn_pos.y = global_position.y
 		instance.add_to_group("bubble")
 		main.add_child.call_deferred(instance)
+		$AnimatedSprite2D.play("player_shoot")
 		
 	
 
@@ -51,11 +52,18 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	if !is_climbing_up and !is_climbing_down:
+		$AnimatedSprite2D.play("player_movement")
 		var direction := Input.get_axis("move_left", "move_right")
+		if direction == 0:
+			$AnimatedSprite2D.pause()
 		if direction:
 			velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
+		if direction == 1:
+			$AnimatedSprite2D.flip_h = false
+		if direction == -1:
+			$AnimatedSprite2D.flip_h = true
 	else:
 		set_collision_mask_value(2, false)
 		velocity.y = CLIMB_VELOCITY * climb_dir
