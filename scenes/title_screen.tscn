@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4ah55exjfmm1"]
 
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_aq7he"]
-[ext_resource type="Texture2D" uid="uid://c56ho2dnwkyis" path="res://assets/tilesets/title_screen.png" id="2_irats"]
-[ext_resource type="FontFile" uid="uid://deta13sbytagj" path="res://assets/fonts/Pixica Fonts/Pixica-Regular.ttf" id="3_24rdx"]
+[ext_resource type="Texture2D" uid="uid://b33o6mshxmofa" path="res://assets/tilesets/title_screen.png" id="2_irats"]
+[ext_resource type="FontFile" uid="uid://bfkgs5kiypr3c" path="res://assets/fonts/Pixica Fonts/Pixica-Regular.ttf" id="3_24rdx"]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_aq7he")
