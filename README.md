@@ -29,6 +29,14 @@ Each time you lay a bubble, you lose twenty points. So don't waste them!
 ## Build Instructions
 You can play this game either by using the included Linux, Windows, or Mac binaries, or you can run it directly in Godot.
 
+WITH EXECUTABLES:
+
+1) Go to "executables" directory and search the right directory for your operating system
+2) FOR MAC USERS! MacOs might block your attempt to run the executable. This can be fixed by first running the exe, then going to System preferences --> Security & Privacy --> "Open Anyway" option for the executable file --> your system password. This let's you play the game.
+
+
+WITH GODOT:
+
 1) Download and install the godot engine from godotengine.org
 2) Import the project
 3) Click Run
