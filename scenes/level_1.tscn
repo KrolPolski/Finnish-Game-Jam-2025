@@ -1,16 +1,17 @@
-[gd_scene load_steps=24 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=25 format=4 uid="uid://clo6cylv8dslo"]
 
-[ext_resource type="Texture2D" uid="uid://clqp2k1834hig" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
-[ext_resource type="Texture2D" uid="uid://b0sae5mprcwrg" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
+[ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
+[ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://2fy856aimvp7" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
+[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
-[ext_resource type="Texture2D" uid="uid://buy37hkbfursr" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
-[ext_resource type="Texture2D" uid="uid://bkh04kjcyb7cj" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_urhyx"]
-[ext_resource type="Texture2D" uid="uid://drr8y6dqjjxr7" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_rom5f"]
-[ext_resource type="Texture2D" uid="uid://dy11kyb8xxjo1" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_ue5ku"]
-[ext_resource type="Texture2D" uid="uid://b1xe6grbfqkl0" path="res://assets/character_sprites/portal_sprite_5.PNG" id="10_gmiu3"]
+[ext_resource type="Texture2D" uid="uid://cl0kb31nuay68" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
+[ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_urhyx"]
+[ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_rom5f"]
+[ext_resource type="Texture2D" uid="uid://cfnr0kgxx50q1" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_ue5ku"]
+[ext_resource type="Texture2D" uid="uid://ccwsacmv278re" path="res://assets/character_sprites/portal_sprite_5.PNG" id="10_gmiu3"]
+[ext_resource type="Texture2D" uid="uid://dng46w2qobh7x" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -85,6 +86,7 @@ tile_set = SubResource("TileSet_1fugo")
 collision_enabled = false
 
 [node name="Sky" type="TileMapLayer" parent="Tilemaps"]
+visible = false
 position = Vector2(362, 721)
 scale = Vector2(2.8, 2.8)
 tile_map_data = PackedByteArray("AAAAAPf/AAAAAAAAAAABAPf/AAAAAAAAAAACAPf/AAAAAAAAAAADAPf/AAAAAAAAAAAEAPf/AAAAAAAAAAAFAPf/AAAAAAAAAAAGAPf/AAAAAAAAAAAHAPf/AAAAAAAAAAAIAPf/AAAAAAAAAAAJAPf/AAAAAAAAAAAKAPf/AAAAAAAAAAALAPf/AAAAAAAAAAALAPb/AAAAAAAAAAAKAPb/AAAAAAAAAAAJAPb/AAAAAAAAAAAIAPb/AAAAAAAAAAAHAPb/AAAAAAAAAAAGAPb/AAAAAAAAAAAFAPb/AAAAAAAAAAAEAPb/AAAAAAAAAAADAPb/AAAAAAAAAAACAPb/AAAAAAAAAAABAPb/AAAAAAAAAAAAAPb/AAAAAAAAAAAAAPX/AAAAAAAAAAABAPX/AAAAAAAAAAACAPX/AAAAAAAAAAADAPX/AAAAAAAAAAAEAPX/AAAAAAAAAAAFAPX/AAAAAAAAAAAGAPX/AAAAAAAAAAAHAPX/AAAAAAAAAAAIAPX/AAAAAAAAAAAJAPX/AAAAAAAAAAAKAPX/AAAAAAAAAAALAPX/AAAAAAAAAAALAPT/AAAAAAAAAAAKAPT/AAAAAAAAAAAJAPT/AAAAAAAAAAAIAPT/AAAAAAAAAAAHAPT/AAAAAAAAAAAGAPT/AAAAAAAAAAAFAPT/AAAAAAAAAAAEAPT/AAAAAAAAAAADAPT/AAAAAAAAAAACAPT/AAAAAAAAAAABAPT/AAAAAAAAAAAAAPT/AAAAAAAAAAAAAPP/AAAAAAAAAAABAPP/AAAAAAAAAAACAPP/AAAAAAAAAAADAPP/AAAAAAAAAAAEAPP/AAAAAAAAAAAFAPP/AAAAAAAAAAAGAPP/AAAAAAAAAAAHAPP/AAAAAAAAAAAIAPP/AAAAAAAAAAAJAPP/AAAAAAAAAAAKAPP/AAAAAAAAAAALAPP/AAAAAAAAAAAAAPL/AAAAAAAAAAABAPL/AAAAAAAAAAACAPL/AAAAAAAAAAADAPL/AAAAAAAAAAAEAPL/AAAAAAAAAAAFAPL/AAAAAAAAAAAGAPL/AAAAAAAAAAAHAPL/AAAAAAAAAAAIAPL/AAAAAAAAAAAJAPL/AAAAAAAAAAAKAPL/AAAAAAAAAAALAPL/AAAAAAAAAAAAAPH/AAAAAAAAAAABAPH/AAAAAAAAAAACAPH/AAAAAAAAAAADAPH/AAAAAAAAAAAEAPH/AAAAAAAAAAAFAPH/AAAAAAAAAAAGAPH/AAAAAAAAAAAHAPH/AAAAAAAAAAAIAPH/AAAAAAAAAAAJAPH/AAAAAAAAAAAKAPH/AAAAAAAAAAALAPH/AAAAAAAAAAAAAPD/AAAAAAAAAAABAPD/AAAAAAAAAAACAPD/AAAAAAAAAAADAPD/AAAAAAAAAAAEAPD/AAAAAAAAAAAFAPD/AAAAAAAAAAAGAPD/AAAAAAAAAAAHAPD/AAAAAAAAAAAIAPD/AAAAAAAAAAAJAPD/AAAAAAAAAAAKAPD/AAAAAAAAAAALAPD/AAAAAAAAAAA=")
@@ -197,7 +199,6 @@ position = Vector2(177, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2/Under_platform" groups=["under_platform"]]
 position = Vector2(-1.99997, 1.86426)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1nnb0")
 
 [node name="Over_platform" type="Area2D" parent="Platform2" groups=["over_platform"]]
@@ -377,7 +378,6 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 position = Vector2(-71.0518, -22)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1aje3")
 
 [node name="ColorRect" type="ColorRect" parent="Floor"]
@@ -396,6 +396,10 @@ shape = SubResource("RectangleShape2D_y4ot2")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
 position = Vector2(906.344, 330.312)
 shape = SubResource("RectangleShape2D_y4ot2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(632, 176)
+texture = ExtResource("12_qxyaj")
 
 [connection signal="area_entered" from="Player/player_area" to="Player" method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="Player/player_area" to="Player" method="_on_player_area_area_exited"]
