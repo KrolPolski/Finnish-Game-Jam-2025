@@ -22,4 +22,8 @@ When the portal is green, it is spawning enemies. When it turns orange, the port
 If trapped enemies hit the ceiling without hitting an orange portal, the bubble pops and the enemies fall back down, get mad and move even faster.
 As the game progresses more and more enemies will spawn faster and faster.
 
+### Scoring
+Each time you send an enemy back through the portal, you gain 100 points.
+Each time you lay a bubble, you lose twenty points. So don't waste them!
+
 ## Build Instructions
