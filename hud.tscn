@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://chsf28pg5vgvo"]
+[gd_scene load_steps=9 format=3 uid="uid://chsf28pg5vgvo"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_0a48s"]
 [ext_resource type="FontFile" uid="uid://cv1oanhwk8nw1" path="res://assets/fonts/Xolonium-Regular.ttf" id="1_ejxvs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dxkdnhlp27p0f" path="res://assets/character_sprites/player_sprite_2.png" id="4_o86w6"]
 [ext_resource type="Texture2D" uid="uid://cxgf4ca15vibu" path="res://assets/character_sprites/player_sprite_3.png" id="5_lovkv"]
 [ext_resource type="Texture2D" uid="uid://b7udvo4usfkrw" path="res://assets/character_sprites/player_sprite_4.png" id="6_kf48v"]
+[ext_resource type="Texture2D" uid="uid://c56ho2dnwkyis" path="res://assets/tilesets/title_screen.png" id="7_o2kq2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ww85"]
 animations = [{
@@ -107,7 +108,7 @@ frame_progress = 0.0046079
 z_index = -3
 position = Vector2(938, 37.8947)
 scale = Vector2(1.125, 1.18421)
-color = Color(0.109804, 0.0901961, 0.0666667, 1)
+color = Color(0.14902, 0.14902, 0.14902, 1)
 offset = Vector2(-24, -24)
 polygon = PackedVector2Array(8, -8, 8, 600, 328, 600, 328, -8)
 
@@ -121,3 +122,8 @@ theme_override_fonts/font = ExtResource("1_ejxvs")
 theme_override_font_sizes/font_size = 21
 text = "Send the monsters
 back through the portal!"
+
+[node name="TitleScreen" type="Sprite2D" parent="."]
+position = Vector2(1100.58, 124.25)
+scale = Vector2(0.668919, 0.668919)
+texture = ExtResource("7_o2kq2")
