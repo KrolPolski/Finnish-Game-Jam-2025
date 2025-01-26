@@ -1,10 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx05tafwjurew"]
+[gd_scene load_steps=7 format=3 uid="uid://cx05tafwjurew"]
 
 [ext_resource type="Script" path="res://bubble.gd" id="1_s1ay2"]
-[ext_resource type="Texture2D" uid="uid://b4yygrjsi68dd" path="res://assets/character_sprites/bubble_sprite_1.PNG" id="2_cscum"]
+[ext_resource type="Texture2D" uid="uid://byxuys3scfdvm" path="res://assets/character_sprites/bubble_sprite_1.PNG" id="2_cscum"]
+[ext_resource type="Texture2D" uid="uid://bxjsd0x3tc53s" path="res://assets/character_sprites/bubble_sprite_2.PNG" id="3_efeia"]
+[ext_resource type="Texture2D" uid="uid://b4ijq1p00xo4m" path="res://assets/character_sprites/bubble_sprite_3.PNG" id="4_wbunb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ntcyj"]
 radius = 3.89573
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_62dam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cscum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_efeia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wbunb")
+}],
+"loop": true,
+"name": &"bubble_sprite",
+"speed": 5.0
+}]
 
 [node name="Bubble" type="Area2D" groups=["bubble"]]
 top_level = true
@@ -16,6 +35,7 @@ script = ExtResource("1_s1ay2")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_cscum")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -25,6 +45,12 @@ shape = SubResource("CircleShape2D_ntcyj")
 process_callback = 0
 wait_time = 2.0
 one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.568627)
+sprite_frames = SubResource("SpriteFrames_62dam")
+animation = &"bubble_sprite"
+frame_progress = 0.780536
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
