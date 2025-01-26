@@ -1,25 +1,25 @@
 [gd_scene load_steps=37 format=4 uid="uid://clo6cylv8dslo"]
 
-[ext_resource type="Texture2D" uid="uid://bte6x61ij7km2" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
-[ext_resource type="Texture2D" uid="uid://ue450dp0d40w" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
+[ext_resource type="Texture2D" uid="uid://8laocbt1dfat" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
+[ext_resource type="Texture2D" uid="uid://bp1tem5nkhmad" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://bpketts11had8" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
+[ext_resource type="Texture2D" uid="uid://dhfd42b5ikcg8" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
-[ext_resource type="Texture2D" uid="uid://7sigw53wbrh" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
-[ext_resource type="Texture2D" uid="uid://cxp8mshb4ruit" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
-[ext_resource type="Texture2D" uid="uid://c8pvyjvqiykdn" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_5ae38"]
-[ext_resource type="Texture2D" uid="uid://nre25pooj41t" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_o4q1q"]
-[ext_resource type="Texture2D" uid="uid://dbf8f36gs703g" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
-[ext_resource type="Texture2D" uid="uid://ci6pcybuehqns" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
+[ext_resource type="Texture2D" uid="uid://besqfu28e7gbn" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
+[ext_resource type="Texture2D" uid="uid://bvxbxl2jni1b7" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
+[ext_resource type="Texture2D" uid="uid://b4jgexxj5acww" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_5ae38"]
+[ext_resource type="Texture2D" uid="uid://behe1f1pgqi32" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_o4q1q"]
+[ext_resource type="Texture2D" uid="uid://ces67qd17kfpc" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
+[ext_resource type="Texture2D" uid="uid://cqeblvi3judfn" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
 [ext_resource type="Script" path="res://scripts/door_area.gd" id="12_h8t6m"]
-[ext_resource type="Texture2D" uid="uid://b2tswci4hds4n" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
-[ext_resource type="Texture2D" uid="uid://bei85jcigqvam" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
-[ext_resource type="Texture2D" uid="uid://dg3d5h41hhmsc" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
-[ext_resource type="Texture2D" uid="uid://ywiqm5ld61qj" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
-[ext_resource type="Texture2D" uid="uid://ctghwmc4q6r75" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
-[ext_resource type="Texture2D" uid="uid://bxpos85w2yi00" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
-[ext_resource type="Texture2D" uid="uid://cxfe267afeb7p" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="Texture2D" uid="uid://db3vj12460p6q" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
+[ext_resource type="Texture2D" uid="uid://0qi0jpkwsy0r" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
+[ext_resource type="Texture2D" uid="uid://btkpq5gliswe1" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
+[ext_resource type="Texture2D" uid="uid://cpw16iiwjoppi" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
+[ext_resource type="Texture2D" uid="uid://ygrp3kjnn4m" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
+[ext_resource type="Texture2D" uid="uid://dlsp77nn3h4xl" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
+[ext_resource type="Texture2D" uid="uid://byxe4ygdsyd05" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -175,12 +175,15 @@ scale = Vector2(0.605469, 0.597656)
 texture = ExtResource("5_2et8h")
 
 [node name="MobTimer" type="Timer" parent="Portal2"]
-wait_time = 2.0
 autostart = true
 
 [node name="PortalTimer" type="Timer" parent="Portal2"]
-wait_time = 10.0
-autostart = true
+wait_time = 5.0
+one_shot = true
+
+[node name="OrangeTimer" type="Timer" parent="Portal2"]
+wait_time = 8.0
+one_shot = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal2"]
 sprite_frames = SubResource("SpriteFrames_xwvrv")

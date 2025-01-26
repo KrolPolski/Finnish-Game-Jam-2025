@@ -10,6 +10,8 @@ var mob_kill_list = null
 func _ready() -> void:
 	$MobTimer.timeout.connect(_on_timer_timeout)
 	$PortalTimer.timeout.connect(_on_Portal_timer_timeout)
+	$OrangeTimer.timeout.connect(_on_Orange_timer_timeout)
+	$PortalTimer.start()
 
 func _on_timer_timeout():
 	if mob_scene and canSpawn:
@@ -20,7 +22,15 @@ func _on_timer_timeout():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _on_Portal_timer_timeout():
-	canSpawn = !canSpawn
+	canSpawn = false
+	$OrangeTimer.start()
+	
+func _on_Orange_timer_timeout():
+	canSpawn = true
+	if ($MobTimer.wait_time > 0.1):
+		$MobTimer.wait_time -= 0.1
+	$PortalTimer.wait_time += 0.5
+	$PortalTimer.start()
 	
 func _process(delta: float) -> void:
 	if canSpawn:

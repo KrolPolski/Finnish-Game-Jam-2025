@@ -17,10 +17,12 @@ func _process(delta: float) -> void:
 	
 	if (position.y <= 30):
 		queue_free()
+#		get_parent().get_node("Player").bubble_count -= 1
 
 
 func _on_timer_timeout() -> void:
 	queue_free()
+#	get_parent().get_node("Player").bubble_count -= 1
 
 
 func _on_area_entered(area: Area2D) -> void:
