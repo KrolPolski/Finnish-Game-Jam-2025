@@ -213,7 +213,6 @@ position = Vector2(-4.66565, 0.871307)
 shape = SubResource("RectangleShape2D_psi11")
 
 [node name="Platform" type="ColorRect" parent="."]
-top_level = true
 offset_left = 407.0
 offset_top = 403.0
 offset_right = 752.0
@@ -247,7 +246,6 @@ shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Platform2" type="ColorRect" parent="."]
-top_level = true
 offset_left = 364.0
 offset_top = 448.0
 offset_right = 709.0
@@ -279,7 +277,6 @@ shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Platform3" type="ColorRect" parent="."]
-top_level = true
 offset_left = 406.0
 offset_top = 493.0
 offset_right = 751.0
@@ -312,7 +309,6 @@ shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Platform4" type="ColorRect" parent="."]
-top_level = true
 offset_left = 363.0
 offset_top = 538.0
 offset_right = 708.0
