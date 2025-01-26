@@ -6,6 +6,7 @@ var time = 0.0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$Died_message.hide()
+	$FinalScore.hide()
 	time += delta
 	update_score(get_parent().get_node("Portal2").score)
 	update_health(get_parent().get_node("Player").health)
@@ -13,12 +14,17 @@ func _process(delta: float) -> void:
 	if get_parent().get_node("Player").health <= 0:
 		get_tree().paused = true
 		$Died_message.show()
+		update_final_score(get_parent().get_node("Portal2").score)
+		$FinalScore.show()
 		$"../Sound_Effects/lose".play()
-		await get_tree().create_timer(2.0).timeout
+		await get_tree().create_timer(3.0).timeout
 		get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
 
 func update_score(score):
 	$ScoreLable/ScoreCounter.text = str(score)
+
+func update_final_score(score):
+	$FinalScore.text = str(score)
 
 func update_health(health):
 	$TimerLable/Health/HealthCounter.text = str(health)

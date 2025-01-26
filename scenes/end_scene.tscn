@@ -17,25 +17,13 @@ offset_bottom = 23.0
 [node name="Died_message" type="Label" parent="Label"]
 layout_mode = 0
 offset_left = 416.0
-offset_top = 187.0
+offset_top = 264.0
 offset_right = 860.0
-offset_bottom = 471.0
+offset_bottom = 469.0
 theme_override_fonts/font = ExtResource("2_sj7rg")
 theme_override_font_sizes/font_size = 48
 text = "Game over!
 
-Your final score was
-
-
 Press ENTER to try again
 or I for instructions"
 horizontal_alignment = 1
-
-[node name="Score" type="Label" parent="."]
-offset_left = 632.0
-offset_top = 334.0
-offset_right = 672.0
-offset_bottom = 368.0
-theme_override_fonts/font = ExtResource("2_sj7rg")
-theme_override_font_sizes/font_size = 42
-text = "0"
