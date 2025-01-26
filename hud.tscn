@@ -52,6 +52,7 @@ theme_override_font_sizes/font_size = 28
 text = "0"
 
 [node name="Health" type="Label" parent="TimerLable"]
+layout_mode = 0
 offset_top = 96.0
 offset_right = 98.0
 offset_bottom = 135.0
