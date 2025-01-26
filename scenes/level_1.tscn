@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=36 format=4 uid="uid://clo6cylv8dslo"]
 
 [ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
 [ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cxgf4ca15vibu" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
 [ext_resource type="Texture2D" uid="uid://b7udvo4usfkrw" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
 [ext_resource type="Texture2D" uid="uid://b70rru1mwvv0g" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="PackedScene" uid="uid://chsf28pg5vgvo" path="res://hud.tscn" id="20_x1vpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -471,6 +472,9 @@ shape = SubResource("RectangleShape2D_samh5")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(632, 176)
 texture = ExtResource("12_qxyaj")
+
+[node name="hud" parent="." instance=ExtResource("20_x1vpn")]
+visible = false
 
 [connection signal="area_entered" from="Player/player_area" to="Player" method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="Player/player_area" to="Player" method="_on_player_area_area_exited"]
