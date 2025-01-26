@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1365evn3r7qh"]
 
 [ext_resource type="Script" path="res://scenes/end_scene.gd" id="1_asy45"]
-[ext_resource type="FontFile" uid="uid://dkatdoixmwto8" path="res://assets/fonts/Pixica Fonts/Pixica-Bold.ttf" id="2_sj7rg"]
+[ext_resource type="FontFile" uid="uid://dd3blstlfsdce" path="res://assets/fonts/Pixica Fonts/Pixica-Bold.ttf" id="2_sj7rg"]
 
 [node name="EndScene" type="Node2D"]
 script = ExtResource("1_asy45")

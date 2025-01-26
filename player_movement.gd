@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 		main.add_child.call_deferred(instance)
 		$AnimatedSprite2D.play("player_shoot")
 		$"../Sound_Effects/set_trap".play()
-		get_parent().get_node("Portal2").score -= 5
+		get_parent().get_node("Portal2").score -= 20
 	#	bubble_count += 1
 		
 	

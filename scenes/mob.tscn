@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://cmfrpqlcr1vws"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_c6a7m"]
-[ext_resource type="Texture2D" uid="uid://b6cieu8e11pss" path="res://assets/character_sprites/enemy_sprite_3.PNG" id="3_3e27u"]
-[ext_resource type="Texture2D" uid="uid://dtggqajec618s" path="res://assets/character_sprites/enemy_sprite_1.PNG" id="4_voowq"]
-[ext_resource type="Texture2D" uid="uid://bnwhkgjd4nyn" path="res://assets/character_sprites/enemy_sprite2.PNG" id="5_oyrsa"]
+[ext_resource type="Texture2D" uid="uid://eue6kjgh5mtu" path="res://assets/character_sprites/enemy_sprite_3.PNG" id="3_3e27u"]
+[ext_resource type="Texture2D" uid="uid://6jqu8kjo047k" path="res://assets/character_sprites/enemy_sprite_1.PNG" id="4_voowq"]
+[ext_resource type="Texture2D" uid="uid://bd3wpnqk4knq8" path="res://assets/character_sprites/enemy_sprite2.PNG" id="5_oyrsa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xcnfi"]
 size = Vector2(5, 5)

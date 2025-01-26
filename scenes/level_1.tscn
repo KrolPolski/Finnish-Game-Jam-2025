@@ -1,33 +1,32 @@
-[gd_scene load_steps=45 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=44 format=4 uid="uid://clo6cylv8dslo"]
 
-[ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
-[ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
+[ext_resource type="Texture2D" uid="uid://p6i3gce4o1wq" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
+[ext_resource type="Texture2D" uid="uid://dlg1cow5jrjh2" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.png" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
-[ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
-[ext_resource type="Texture2D" uid="uid://cl0kb31nuay68" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
-[ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_5ae38"]
-[ext_resource type="Texture2D" uid="uid://cfnr0kgxx50q1" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_o4q1q"]
-[ext_resource type="Texture2D" uid="uid://s3cgmf20cj78" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
-[ext_resource type="Texture2D" uid="uid://bmeejg3s0dxe2" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
+[ext_resource type="Texture2D" uid="uid://c8dl8it8vcu2o" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
+[ext_resource type="Texture2D" uid="uid://5ot8dr21nxk5" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
+[ext_resource type="Texture2D" uid="uid://qw73ylsng3ud" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_5ae38"]
+[ext_resource type="Texture2D" uid="uid://dljghosqcjhj5" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_o4q1q"]
+[ext_resource type="Texture2D" uid="uid://s5t1axa2dv5d" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
+[ext_resource type="Texture2D" uid="uid://cx73vqrhdm886" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
 [ext_resource type="Script" path="res://scripts/door_area.gd" id="12_h8t6m"]
-[ext_resource type="Texture2D" uid="uid://bdisuabeutipt" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
-[ext_resource type="Texture2D" uid="uid://dxkdnhlp27p0f" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
-[ext_resource type="Texture2D" uid="uid://dng46w2qobh7x" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
-[ext_resource type="Texture2D" uid="uid://dvxpj0mcrehxg" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
-[ext_resource type="Texture2D" uid="uid://cxgf4ca15vibu" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
-[ext_resource type="Texture2D" uid="uid://b7udvo4usfkrw" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
-[ext_resource type="Texture2D" uid="uid://b70rru1mwvv0g" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="Texture2D" uid="uid://r0kn41bng4h4" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
+[ext_resource type="Texture2D" uid="uid://rqxpijv22j2e" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
+[ext_resource type="Texture2D" uid="uid://pcrcniwghwfp" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
+[ext_resource type="Texture2D" uid="uid://c8xf66cdr7fw0" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
+[ext_resource type="Texture2D" uid="uid://b85xbbl402vib" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
+[ext_resource type="Texture2D" uid="uid://c170ld6aopwvs" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
+[ext_resource type="Texture2D" uid="uid://y2j30xpm4f1m" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
 [ext_resource type="PackedScene" uid="uid://chsf28pg5vgvo" path="res://hud.tscn" id="21_vnnll"]
-[ext_resource type="AudioStream" uid="uid://b6jo87hr1o1j7" path="res://assets/sound/set_trap1.wav" id="21_x8i8j"]
-[ext_resource type="AudioStream" uid="uid://rsbqjen833fc" path="res://assets/sound/portalspawn1.wav" id="22_ussg3"]
-[ext_resource type="AudioStream" uid="uid://byl6l0axtft65" path="res://assets/sound/backtoportal1.wav" id="23_0dy3h"]
-[ext_resource type="AudioStream" uid="uid://dpde24ts2lg4i" path="res://assets/sound/bubble1.wav" id="24_nf6uj"]
-[ext_resource type="AudioStream" uid="uid://c8hthwvq7qc4m" path="res://assets/sound/lose1.wav" id="25_swhuf"]
-[ext_resource type="AudioStream" uid="uid://edoqk2nbgtjj" path="res://assets/sound/music/bubbletheme.wav" id="26_8hq2p"]
-[ext_resource type="AudioStream" uid="uid://ggs7urqrhd8m" path="res://assets/sound/ouch.wav" id="26_gg37n"]
+[ext_resource type="AudioStream" uid="uid://d0pbs1d3wo5pv" path="res://assets/sound/set_trap1.wav" id="21_x8i8j"]
+[ext_resource type="AudioStream" uid="uid://b21tjac8ikqdq" path="res://assets/sound/portalspawn1.wav" id="22_ussg3"]
+[ext_resource type="AudioStream" uid="uid://bmtmx323hu3el" path="res://assets/sound/backtoportal1.wav" id="23_0dy3h"]
+[ext_resource type="AudioStream" uid="uid://dg2731kwhj2d7" path="res://assets/sound/bubble1.wav" id="24_nf6uj"]
+[ext_resource type="AudioStream" uid="uid://b1ivrn6ce7bl3" path="res://assets/sound/lose1.wav" id="25_swhuf"]
+[ext_resource type="AudioStream" uid="uid://dnh8uj8w7e4v3" path="res://assets/sound/music/bubbletheme.wav" id="26_8hq2p"]
+[ext_resource type="AudioStream" uid="uid://1y6u4q6qp8hw" path="res://assets/sound/ouch.wav" id="26_gg37n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -55,7 +54,7 @@ radius = 29.203
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_2et8h")
+"texture": null
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_asnly")
@@ -182,7 +181,6 @@ shape = SubResource("CircleShape2D_fyneq")
 visible = false
 position = Vector2(410, 44)
 scale = Vector2(0.605469, 0.597656)
-texture = ExtResource("5_2et8h")
 
 [node name="MobTimer" type="Timer" parent="Portal2"]
 autostart = true
