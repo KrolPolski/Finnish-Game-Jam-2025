@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var health = 4
+#@export var bubble_count = 0
 
 const SPEED = 200.0
 const CLIMB_VELOCITY = -200.0
@@ -39,15 +40,16 @@ func _physics_process(delta: float) -> void:
 		climb_dir = -1
 
 		
-	if Input.is_action_just_pressed("drop_bubble") and !is_climbing_up and !is_climbing_down and is_on_floor():
+	if Input.is_action_just_pressed("drop_bubble") and !is_climbing_up and !is_climbing_down and is_on_floor(): #bubble_count < 5
 		var instance = bubble_preload.instantiate()
 		instance.spawn_pos.x = global_position.x
 		instance.spawn_pos.y = global_position.y
 		instance.add_to_group("bubble")
 		main.add_child.call_deferred(instance)
 		$AnimatedSprite2D.play("player_shoot")
+		$"../Sound_Effects/set_trap".play()
 		get_parent().get_node("Portal2").score -= 5
-		print(get_parent().get_node("Portal2").score)
+	#	bubble_count += 1
 		
 	
 
@@ -102,4 +104,5 @@ func _on_player_area_area_exited(area: Area2D) -> void:
 			is_climbing_down = false
 			set_collision_mask_value(2, true)
 	if area.is_in_group("mob"):
+		$"../Sound_Effects/ouch".play()
 		health -= 1

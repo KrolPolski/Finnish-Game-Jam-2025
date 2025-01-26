@@ -14,7 +14,7 @@ var angle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$"../Sound_Effects/portal_spawn".play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,7 +42,6 @@ func _physics_process(delta: float):
 			is_floating = false
 			set_collision_mask_value(2, true)
 			set_collision_mask_value(3, true)
-			set_collision_mask_value(4, true)
 			set_collision_mask_value(5, true)
 			speed += 50
 			
@@ -54,12 +53,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		velocity.x = 0
 		velocity.y = FLOAT_SPEED
 		is_floating = true
+		$"../Sound_Effects/bubbled".play()
 		set_collision_mask_value(2, false)
 		set_collision_mask_value(3, false)
-		set_collision_mask_value(4, false)
 		set_collision_mask_value(5, false)
 
 
 func _on_door_area_body_entered(body: Node2D) -> void:
 	# change scene to game over
+	$"../Sound_Effects/lose".play()
 	get_tree().paused = true
