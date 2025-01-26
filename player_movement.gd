@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var health = 10
+@export var health = 4
 
 const SPEED = 200.0
 const CLIMB_VELOCITY = -200.0

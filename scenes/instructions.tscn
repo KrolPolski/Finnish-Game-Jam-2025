@@ -1,0 +1,151 @@
+[gd_scene load_steps=9 format=3 uid="uid://ovik2f5q42k1"]
+
+[ext_resource type="Script" path="res://scenes/instructions.gd" id="1_5x0es"]
+[ext_resource type="FontFile" uid="uid://dkatdoixmwto8" path="res://assets/fonts/Pixica Fonts/Pixica-Bold.ttf" id="2_0q2kp"]
+[ext_resource type="Texture2D" uid="uid://dd0dej8qna5ce" path="res://assets/character_sprites/enemy_sprite_1.PNG" id="3_trnso"]
+[ext_resource type="Texture2D" uid="uid://byxuys3scfdvm" path="res://assets/character_sprites/bubble_sprite_1.PNG" id="4_tt5xe"]
+[ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.png" id="5_eyedt"]
+[ext_resource type="Texture2D" uid="uid://s3cgmf20cj78" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="6_d2j74"]
+[ext_resource type="Texture2D" uid="uid://b70rru1mwvv0g" path="res://assets/character_sprites/player_shoot.png" id="7_06bor"]
+[ext_resource type="Texture2D" uid="uid://cl0kb31nuay68" path="res://assets/character_sprites/player_sprite_1.png" id="8_76etk"]
+
+[node name="Instructions" type="Node2D"]
+script = ExtResource("1_5x0es")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(-8, 0)
+color = Color(0.14902, 0.14902, 0.14902, 1)
+polygon = PackedVector2Array(0, 0, 0, 720, 1280, 720, 1280, 0)
+
+[node name="Message" type="Label" parent="."]
+offset_left = 464.0
+offset_top = 16.0
+offset_right = 801.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0q2kp")
+theme_override_font_sizes/font_size = 36
+text = "Send the monsters
+back through the portal!
+Press ENTER to begin"
+horizontal_alignment = 1
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(198, 312)
+scale = Vector2(0.666667, 0.338843)
+polygon = PackedVector2Array(224, 600, 224, 640, 271.557, 640, 320, 640, 320, 664, 368, 616, 320, 576, 320, 600)
+
+[node name="PortalSprite2" type="Sprite2D" parent="."]
+position = Vector2(768, 360)
+scale = Vector2(2, 2)
+texture = ExtResource("5_eyedt")
+
+[node name="PortalSpriteOrange1" type="Sprite2D" parent="."]
+position = Vector2(1024, 360)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("6_d2j74")
+
+[node name="PlayerShoot" type="Sprite2D" parent="."]
+position = Vector2(174, 520)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("7_06bor")
+
+[node name="PlayerSprite1" type="Sprite2D" parent="."]
+position = Vector2(280, 277)
+scale = Vector2(3.75, 3.75)
+texture = ExtResource("8_76etk")
+
+[node name="EnemySprite2" type="Sprite2D" parent="."]
+position = Vector2(760, 534)
+scale = Vector2(1.94531, 1.94531)
+texture = ExtResource("3_trnso")
+
+[node name="Message2" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 376.0
+offset_right = 620.0
+offset_bottom = 454.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0q2kp")
+theme_override_font_sizes/font_size = 36
+text = "Capture the monsters by placing bubbles 
+in their path using SPACE"
+
+[node name="BubbleSprite1" type="Sprite2D" parent="."]
+position = Vector2(270, 520)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("4_tt5xe")
+
+[node name="EnemySprite1" type="Sprite2D" parent="."]
+position = Vector2(534, 520)
+scale = Vector2(3.25, 3.25)
+texture = ExtResource("3_trnso")
+
+[node name="Message3" type="Label" parent="."]
+offset_left = 704.0
+offset_top = 145.0
+offset_right = 1260.0
+offset_bottom = 270.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0q2kp")
+theme_override_font_sizes/font_size = 36
+text = "When the portal is green it spawns 
+monsters 
+When it's orange the monsters can be 
+sent back to their realm"
+
+[node name="BubbleSprite2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.380392)
+position = Vector2(1026, 538)
+scale = Vector2(3.12501, 3.12501)
+texture = ExtResource("4_tt5xe")
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(904, 398)
+rotation = 1.5708
+scale = Vector2(0.225895, 0.225895)
+polygon = PackedVector2Array(224, 600, 224, 640, 320, 640, 320, 664, 368, 616, 320, 576, 320, 600, 268.007, 600)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Polygon2D3"]
+position = Vector2(566.634, -35.4142)
+rotation = -3.14159
+scale = Vector2(0.994546, 0.834321)
+polygon = PackedVector2Array(224, 600, 224, 640, 320, 640, 320, 664, 368, 616, 320, 576, 320, 600, 268.007, 600)
+
+[node name="EnemySprite3" type="Sprite2D" parent="."]
+position = Vector2(1020, 537)
+scale = Vector2(1.75849, 1.75849)
+texture = ExtResource("3_trnso")
+
+[node name="Instructions" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 141.0
+offset_right = 509.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0q2kp")
+theme_override_font_sizes/font_size = 36
+text = "Move player: ARROW / WASD keys"
+
+[node name="Message4" type="Label" parent="."]
+offset_left = 728.0
+offset_top = 603.0
+offset_right = 1284.0
+offset_bottom = 728.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0q2kp")
+theme_override_font_sizes/font_size = 36
+text = "If the monster hits the ceiling it will 
+fall back down angrier (and faster) 
+than before"
+
+[node name="Message5" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 603.0
+offset_right = 620.0
+offset_bottom = 728.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_0q2kp")
+theme_override_font_sizes/font_size = 36
+text = "Deploying bubbles costs points so 
+use them wisely"
