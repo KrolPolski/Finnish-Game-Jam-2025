@@ -40,8 +40,11 @@ func _physics_process(delta: float):
 		move_and_slide()
 		if (position.y <= 30):
 			is_floating = false
-			set_collision_mask_value(1, true)
 			set_collision_mask_value(2, true)
+			set_collision_mask_value(3, true)
+			set_collision_mask_value(4, true)
+			set_collision_mask_value(5, true)
+			speed += 50
 			
 	
 
@@ -51,8 +54,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		velocity.x = 0
 		velocity.y = FLOAT_SPEED
 		is_floating = true
-		set_collision_mask_value(1, false)
 		set_collision_mask_value(2, false)
+		set_collision_mask_value(3, false)
+		set_collision_mask_value(4, false)
+		set_collision_mask_value(5, false)
 
 
 func _on_door_area_body_entered(body: Node2D) -> void:
