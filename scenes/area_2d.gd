@@ -51,6 +51,7 @@ func _physics_process(delta: float):
 			if mob.is_in_group("mob"):
 				mob.queue_free()
 				score += 100
+				$"../Sound_Effects/portal_score".play()
 		mob_kill_list = null
 #func _on_area_entered(area: Area2D) -> void:
 	#print(area.name)

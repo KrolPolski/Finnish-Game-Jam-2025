@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://clo6cylv8dslo"]
+[gd_scene load_steps=43 format=4 uid="uid://clo6cylv8dslo"]
 
 [ext_resource type="Texture2D" uid="uid://8laocbt1dfat" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
 [ext_resource type="Texture2D" uid="uid://bp1tem5nkhmad" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
@@ -20,12 +20,27 @@
 [ext_resource type="Texture2D" uid="uid://ygrp3kjnn4m" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
 [ext_resource type="Texture2D" uid="uid://dlsp77nn3h4xl" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
 [ext_resource type="Texture2D" uid="uid://byxe4ygdsyd05" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="Texture2D" uid="uid://d2n2tth7doaqa" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
+[ext_resource type="Texture2D" uid="uid://dgjo6vr0qsqyp" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
+[ext_resource type="Texture2D" uid="uid://b5arj256jqt3y" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
+[ext_resource type="Texture2D" uid="uid://b7jumbcpujo62" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
+[ext_resource type="Texture2D" uid="uid://bfi5h6hmgwqhi" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
+[ext_resource type="Texture2D" uid="uid://g8q4eh7e6j2y" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
+[ext_resource type="Texture2D" uid="uid://b34uijsdykysj" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="AudioStream" uid="uid://t4omsyqev36b" path="res://assets/sound/set_trap1.wav" id="21_x8i8j"]
+[ext_resource type="AudioStream" uid="uid://bybpu0l8kf5cx" path="res://assets/sound/portalspawn1.wav" id="22_ussg3"]
+[ext_resource type="AudioStream" uid="uid://bv3u0kuuxbhk7" path="res://assets/sound/backtoportal1.wav" id="23_0dy3h"]
+[ext_resource type="AudioStream" uid="uid://c6vii0lbagoh" path="res://assets/sound/bubble1.wav" id="24_nf6uj"]
+[ext_resource type="AudioStream" uid="uid://c3t71ajub1f3s" path="res://assets/sound/lose1.wav" id="25_swhuf"]
+[ext_resource type="AudioStream" uid="uid://dtc3jlso0bs4b" path="res://assets/sound/music/bubbletheme.wav" id="26_8hq2p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6.25, 8, 6.25, 8, 8, -8, 8)
 1:0/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_1fugo"]
 physics_layer_0/collision_layer = 1
@@ -140,7 +155,7 @@ size = Vector2(13, 20)
 [node name="Floor" type="TileMapLayer" parent="Tilemaps"]
 position = Vector2(362, 721)
 scale = Vector2(2.8, 2.8)
-tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAAAAAAAAAAAAP7/AAABAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAALAP3/AAABAAAAAAAKAP3/AAAAAAAAAAAJAP3/AAAAAAAAAAAIAP3/AAAAAAAAAAAHAP3/AAAAAAAAAAAGAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAEAP3/AAAAAAAAAAADAP3/AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAABAAAAAAABAPz/AAAAAAAAAAACAPz/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAPz/AAAAAAAAAAAHAPz/AAAAAAAAAAAIAPz/AAAAAAAAAAAJAPz/AAAAAAAAAAAKAPz/AAAAAAAAAAALAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAIAPv/AAAAAAAAAAAJAPv/AAAAAAAAAAAKAPv/AAAAAAAAAAALAPv/AAABAAAAAAAAAPr/AAABAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAHAPr/AAAAAAAAAAAIAPr/AAAAAAAAAAAJAPr/AAAAAAAAAAAKAPr/AAAAAAAAAAALAPr/AAAAAAAAAAAAAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPn/AAAAAAAAAAADAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAIAPn/AAAAAAAAAAAJAPn/AAAAAAAAAAAKAPn/AAAAAAAAAAALAPn/AAABAAAAAAAAAPj/AAABAAAAAAABAPj/AAAAAAAAAAACAPj/AAAAAAAAAAADAPj/AAAAAAAAAAAEAPj/AAAAAAAAAAAFAPj/AAAAAAAAAAAGAPj/AAAAAAAAAAAHAPj/AAAAAAAAAAAIAPj/AAAAAAAAAAAJAPj/AAAAAAAAAAAKAPj/AAAAAAAAAAALAPj/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAADAP//AAAAAAAAAAAEAP//AAAAAAAAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AAAAAAAAAAAJAP//AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAACAAAAAAAAAP7/AAABAAAAAAABAP7/AAAAAAAAAAACAP7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAP7/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAALAP3/AAABAAAAAAAKAP3/AAAAAAAAAAAJAP3/AAAAAAAAAAAIAP3/AAAAAAAAAAAHAP3/AAAAAAAAAAAGAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAEAP3/AAAAAAAAAAADAP3/AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAAAAPz/AAABAAAAAAABAPz/AAAAAAAAAAACAPz/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAPz/AAAAAAAAAAAHAPz/AAAAAAAAAAAIAPz/AAAAAAAAAAAJAPz/AAAAAAAAAAAKAPz/AAAAAAAAAAALAPz/AAAAAAAAAAAAAPv/AAAAAAAAAAABAPv/AAAAAAAAAAACAPv/AAAAAAAAAAADAPv/AAAAAAAAAAAEAPv/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPv/AAAAAAAAAAAHAPv/AAAAAAAAAAAIAPv/AAAAAAAAAAAJAPv/AAAAAAAAAAAKAPv/AAAAAAAAAAALAPv/AAABAAAAAAAAAPr/AAABAAAAAAABAPr/AAAAAAAAAAACAPr/AAAAAAAAAAADAPr/AAAAAAAAAAAEAPr/AAAAAAAAAAAFAPr/AAAAAAAAAAAGAPr/AAAAAAAAAAAHAPr/AAAAAAAAAAAIAPr/AAAAAAAAAAAJAPr/AAAAAAAAAAAKAPr/AAAAAAAAAAALAPr/AAAAAAAAAAAAAPn/AAAAAAAAAAABAPn/AAAAAAAAAAACAPn/AAAAAAAAAAADAPn/AAAAAAAAAAAEAPn/AAAAAAAAAAAFAPn/AAAAAAAAAAAGAPn/AAAAAAAAAAAHAPn/AAAAAAAAAAAIAPn/AAAAAAAAAAAJAPn/AAAAAAAAAAAKAPn/AAAAAAAAAAALAPn/AAABAAAAAAAAAPj/AAABAAAAAAABAPj/AAAAAAAAAAACAPj/AAAAAAAAAAADAPj/AAAAAAAAAAAEAPj/AAAAAAAAAAAFAPj/AAAAAAAAAAAGAPj/AAAAAAAAAAAHAPj/AAAAAAAAAAAIAPj/AAAAAAAAAAAJAPj/AAAAAAAAAAAKAPj/AAAAAAAAAAALAPj/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_1fugo")
 collision_enabled = false
 
@@ -496,6 +511,31 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_poxnp")
 one_way_collision_margin = 2.0
 metadata/_edit_group_ = true
+
+[node name="Sound_Effects" type="Node" parent="."]
+
+[node name="set_trap" type="AudioStreamPlayer" parent="Sound_Effects"]
+stream = ExtResource("21_x8i8j")
+
+[node name="portal_spawn" type="AudioStreamPlayer" parent="Sound_Effects"]
+stream = ExtResource("22_ussg3")
+
+[node name="portal_score" type="AudioStreamPlayer" parent="Sound_Effects"]
+stream = ExtResource("23_0dy3h")
+
+[node name="bubbled" type="AudioStreamPlayer" parent="Sound_Effects"]
+stream = ExtResource("24_nf6uj")
+
+[node name="lose" type="AudioStreamPlayer" parent="Sound_Effects"]
+stream = ExtResource("25_swhuf")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Sound_Effects"]
+
+[node name="Music" type="Node" parent="."]
+
+[node name="Level_1_theme" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource("26_8hq2p")
+autoplay = true
 
 [connection signal="area_entered" from="Player/player_area" to="Player" method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="Player/player_area" to="Player" method="_on_player_area_area_exited"]
