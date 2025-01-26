@@ -11,10 +11,11 @@ func _process(delta: float) -> void:
 	update_health(get_parent().get_node("Player").health)
 	update_timer(time)
 	if get_parent().get_node("Player").health <= 0:
-			get_tree().paused = true
-			$Died_message.show()
-			await get_tree().create_timer(2.0).timeout
-			get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
+		get_tree().paused = true
+		$Died_message.show()
+		$"../Sound_Effects/lose".play()
+		await get_tree().create_timer(2.0).timeout
+		get_tree().change_scene_to_file("res://scenes/end_scene.tscn")
 
 func update_score(score):
 	$ScoreLable/ScoreCounter.text = str(score)

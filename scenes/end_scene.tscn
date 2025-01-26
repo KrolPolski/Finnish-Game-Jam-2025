@@ -15,6 +15,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="Died_message" type="Label" parent="Label"]
+layout_mode = 0
 offset_left = 416.0
 offset_top = 187.0
 offset_right = 860.0
