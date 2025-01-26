@@ -56,8 +56,3 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		set_collision_mask_value(2, false)
 		set_collision_mask_value(3, false)
 		set_collision_mask_value(5, false)
-
-
-func _on_door_area_body_entered(body: Node2D) -> void:
-	# change scene to game over
-	get_tree().paused = true
