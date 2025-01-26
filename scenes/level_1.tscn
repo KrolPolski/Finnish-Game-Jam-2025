@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
+[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.png" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
-[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.png" id="6_lji51"]
 [ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.png" id="7_asnly"]
 [ext_resource type="Texture2D" uid="uid://cl0kb31nuay68" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
 [ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.png" id="8_5ae38"]
@@ -45,7 +44,7 @@ radius = 29.203
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_lji51")
+"texture": ExtResource("5_2et8h")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_asnly")
@@ -178,7 +177,6 @@ autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal2"]
 sprite_frames = SubResource("SpriteFrames_xwvrv")
-
 animation = &"portal_sprite_orange"
 frame_progress = 0.795924
 
@@ -465,7 +463,6 @@ shape = SubResource("RectangleShape2D_y4ot2")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" groups=["wall"]]
 position = Vector2(906.344, 330.312)
 shape = SubResource("RectangleShape2D_y4ot2")
-
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(629, -6)
