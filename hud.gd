@@ -4,22 +4,9 @@ extends CanvasLayer
 func _ready() -> void:
 	pass # Replace with function body.
 
-func start_game():
-	get_tree().change_scene_to_file("res://world.tscn")
-
-func on_start_button_pressed():
-	$Message.text = "Send the creatures back through the portal!"
-	$Message.show()
-	
-	# start_game.emit()
-
-func _key_input(event):
-	if event is InputEventKey and event.pressed and event.scancode == KEY_SPACE:
-		start_game()
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	update_score(1)
+	update_score(get_parent().get_node("Portal2").score)
 
 func update_score(score):
 	$ScoreLable/ScoreCounter.text = str(score)
