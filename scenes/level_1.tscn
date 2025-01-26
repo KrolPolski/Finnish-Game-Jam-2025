@@ -1,24 +1,24 @@
 [gd_scene load_steps=35 format=4 uid="uid://clo6cylv8dslo"]
 
-[ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
-[ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
+[ext_resource type="Texture2D" uid="uid://bmetur3enq5ta" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
+[ext_resource type="Texture2D" uid="uid://dihyvyn3nojjp" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.png" id="5_2et8h"]
+[ext_resource type="Texture2D" uid="uid://cntogede18app" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
-[ext_resource type="Texture2D" uid="uid://cmacqhlndod8a" path="res://assets/character_sprites/portal_sprite_2.png" id="7_asnly"]
-[ext_resource type="Texture2D" uid="uid://cl0kb31nuay68" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
-[ext_resource type="Texture2D" uid="uid://duci0ua3wghax" path="res://assets/character_sprites/portal_sprite_3.png" id="8_5ae38"]
-[ext_resource type="Texture2D" uid="uid://cfnr0kgxx50q1" path="res://assets/character_sprites/portal_sprite_4.png" id="9_o4q1q"]
-[ext_resource type="Texture2D" uid="uid://s3cgmf20cj78" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
-[ext_resource type="Texture2D" uid="uid://bmeejg3s0dxe2" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
-[ext_resource type="Texture2D" uid="uid://bdisuabeutipt" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
-[ext_resource type="Texture2D" uid="uid://dxkdnhlp27p0f" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
-[ext_resource type="Texture2D" uid="uid://dng46w2qobh7x" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
-[ext_resource type="Texture2D" uid="uid://dvxpj0mcrehxg" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
-[ext_resource type="Texture2D" uid="uid://cxgf4ca15vibu" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
-[ext_resource type="Texture2D" uid="uid://b7udvo4usfkrw" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
-[ext_resource type="Texture2D" uid="uid://b70rru1mwvv0g" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
+[ext_resource type="Texture2D" uid="uid://cyjdseumsoe3s" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
+[ext_resource type="Texture2D" uid="uid://fd2tnrtxhw80" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
+[ext_resource type="Texture2D" uid="uid://bb03ujc00kj4n" path="res://assets/character_sprites/portal_sprite_3.PNG" id="8_5ae38"]
+[ext_resource type="Texture2D" uid="uid://c82qp0eyhpevo" path="res://assets/character_sprites/portal_sprite_4.PNG" id="9_o4q1q"]
+[ext_resource type="Texture2D" uid="uid://nhhprx8nrcuq" path="res://assets/character_sprites/portal_sprite_orange_1.png" id="10_eh26s"]
+[ext_resource type="Texture2D" uid="uid://bkuh3yms88xp4" path="res://assets/character_sprites/portal_sprite_orange_2.png" id="11_sixkw"]
+[ext_resource type="Texture2D" uid="uid://5merfvld5hsf" path="res://assets/character_sprites/portal_sprite_orange_3.png" id="12_ji7kh"]
+[ext_resource type="Texture2D" uid="uid://bdbdo6pc4gota" path="res://assets/character_sprites/player_sprite_2.png" id="12_lx1n1"]
+[ext_resource type="Texture2D" uid="uid://dbwrywrg0gum6" path="res://assets/tilesets/background_light.png" id="12_qxyaj"]
+[ext_resource type="Texture2D" uid="uid://cxi7jk0v57d1a" path="res://assets/character_sprites/portal_sprite_orange_4.png" id="13_06o7i"]
+[ext_resource type="Texture2D" uid="uid://bsvq77vpn5xku" path="res://assets/character_sprites/player_sprite_3.png" id="13_mh742"]
+[ext_resource type="Texture2D" uid="uid://cypi0ku4cwdne" path="res://assets/character_sprites/player_sprite_4.png" id="14_jtbev"]
+[ext_resource type="Texture2D" uid="uid://bvmue4b3j7ge8" path="res://assets/character_sprites/player_shoot.png" id="15_yk8us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -78,7 +78,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7p0mf"]
-size = Vector2(19.0126, 37.7793)
+size = Vector2(19.0126, 31.6811)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mhqvf"]
 animations = [{
@@ -108,17 +108,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_00mx3"]
-radius = 9.36279
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psi11"]
+size = Vector2(21.3691, 31.3623)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f417m"]
 size = Vector2(348.279, 47.1943)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nnb0"]
-size = Vector2(348.004, 141.243)
+size = Vector2(348.004, 179.318)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crxav"]
-size = Vector2(347.628, 70.7914)
+size = Vector2(347.628, 98.322)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1aje3"]
 size = Vector2(1415.79, 44)
@@ -153,6 +153,7 @@ tile_map_data = PackedByteArray("AAAsABUAAQAAAAAAAAAtABUAAQAEAAAAAAAuABUAAQAEAAA
 [node name="Portal2" type="Area2D" parent="."]
 top_level = true
 position = Vector2(419, 47)
+scale = Vector2(1.49919, 1.50061)
 script = ExtResource("3_lbnyv")
 mob_scene = ExtResource("4_mkim1")
 metadata/_edit_group_ = true
@@ -172,7 +173,7 @@ wait_time = 2.0
 autostart = true
 
 [node name="PortalTimer" type="Timer" parent="Portal2"]
-wait_time = 20.0
+wait_time = 10.0
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Portal2"]
@@ -185,7 +186,7 @@ position = Vector2(420, 20)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 top_level = true
-position = Vector2(498, 385)
+position = Vector2(505, 474)
 scale = Vector2(1.49528, 1.14788)
 collision_mask = 3
 script = ExtResource("6_dhlg7")
@@ -198,7 +199,7 @@ texture = ExtResource("7_ayfcc")
 [node name="player_area" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/player_area"]
-position = Vector2(-5.49368, -2.88965)
+position = Vector2(-5.49368, 0.159485)
 shape = SubResource("RectangleShape2D_7p0mf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -208,10 +209,11 @@ sprite_frames = SubResource("SpriteFrames_mhqvf")
 animation = &"player_shoot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(-5.35018, -0.871171)
-shape = SubResource("CapsuleShape2D_00mx3")
+position = Vector2(-4.66565, 0.871307)
+shape = SubResource("RectangleShape2D_psi11")
 
 [node name="Platform" type="ColorRect" parent="."]
+top_level = true
 offset_left = 407.0
 offset_top = 403.0
 offset_right = 752.0
@@ -240,11 +242,12 @@ metadata/_edit_group_ = true
 position = Vector2(175, -54)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Over_platform" groups=["over_platform"]]
-position = Vector2(-1, 85.4629)
+position = Vector2(-1, 71.6982)
 shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Platform2" type="ColorRect" parent="."]
+top_level = true
 offset_left = 364.0
 offset_top = 448.0
 offset_right = 709.0
@@ -276,6 +279,7 @@ shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Platform3" type="ColorRect" parent="."]
+top_level = true
 offset_left = 406.0
 offset_top = 493.0
 offset_right = 751.0
@@ -295,7 +299,7 @@ shape = SubResource("RectangleShape2D_f417m")
 position = Vector2(177, 118)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3/Under_platform" groups=["under_platform"]]
-position = Vector2(-2.00006, -17.7939)
+position = Vector2(-2.00003, 1.24316)
 scale = Vector2(1, 0.999999)
 shape = SubResource("RectangleShape2D_1nnb0")
 
@@ -308,6 +312,7 @@ shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Platform4" type="ColorRect" parent="."]
+top_level = true
 offset_left = 363.0
 offset_top = 538.0
 offset_right = 708.0
@@ -437,7 +442,6 @@ shape = SubResource("RectangleShape2D_crxav")
 debug_color = Color(0.868578, 0.284712, 0.536521, 0.42)
 
 [node name="Floor" type="StaticBody2D" parent="."]
-top_level = true
 position = Vector2(659, 719)
 scale = Vector2(0.38, 0.051)
 metadata/_edit_group_ = true

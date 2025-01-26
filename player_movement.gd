@@ -45,6 +45,8 @@ func _physics_process(delta: float) -> void:
 		instance.add_to_group("bubble")
 		main.add_child.call_deferred(instance)
 		$AnimatedSprite2D.play("player_shoot")
+		get_parent().get_node("Portal2").score -= 5
+		print(get_parent().get_node("Portal2").score)
 		
 	
 
