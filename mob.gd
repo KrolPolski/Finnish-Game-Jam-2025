@@ -42,7 +42,6 @@ func _physics_process(delta: float):
 			is_floating = false
 			set_collision_mask_value(2, true)
 			set_collision_mask_value(3, true)
-			set_collision_mask_value(4, true)
 			set_collision_mask_value(5, true)
 			speed += 50
 			
@@ -56,7 +55,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		is_floating = true
 		set_collision_mask_value(2, false)
 		set_collision_mask_value(3, false)
-		set_collision_mask_value(4, false)
 		set_collision_mask_value(5, false)
 
 
