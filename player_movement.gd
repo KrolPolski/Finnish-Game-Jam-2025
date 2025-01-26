@@ -104,4 +104,5 @@ func _on_player_area_area_exited(area: Area2D) -> void:
 			is_climbing_down = false
 			set_collision_mask_value(2, true)
 	if area.is_in_group("mob"):
+		$"../Sound_Effects/ouch".play()
 		health -= 1
