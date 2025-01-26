@@ -28,27 +28,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Mob" type="CharacterBody2D"]
+[node name="Mob" type="CharacterBody2D" groups=["mob"]]
 top_level = true
-position = Vector2(0, -1)
-collision_mask = 3
+position = Vector2(1, 0)
+collision_mask = 19
 script = ExtResource("1_c6a7m")
 
 [node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
 position = Vector2(45, 1)
 collision_layer = 8
-collision_mask = 15
+collision_mask = 31
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["enemy"]]
-position = Vector2(349, 200)
+position = Vector2(-46, 1)
 shape = SubResource("RectangleShape2D_xcnfi")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." groups=["mob"]]
-position = Vector2(394, 200)
+position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_hn5fo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(393, 199)
 sprite_frames = SubResource("SpriteFrames_411or")
 animation = &"enemy_sprite"
 flip_h = true
