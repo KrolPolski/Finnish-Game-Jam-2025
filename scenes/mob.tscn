@@ -31,15 +31,16 @@ animations = [{
 [node name="Mob" type="CharacterBody2D" groups=["mob"]]
 top_level = true
 position = Vector2(1, 0)
-collision_mask = 31
+collision_layer = 8
+collision_mask = 30
 script = ExtResource("1_c6a7m")
 
-[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+[node name="Area2D" type="Area2D" parent="." groups=["enemy", "mob"]]
 position = Vector2(-2, 1)
 collision_layer = 8
 collision_mask = 31
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["enemy"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["enemy", "mob"]]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_xcnfi")
 
