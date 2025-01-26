@@ -1,10 +1,10 @@
 [gd_scene load_steps=44 format=4 uid="uid://clo6cylv8dslo"]
 
-[ext_resource type="Texture2D" uid="uid://r6iy66d2e364" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
-[ext_resource type="Texture2D" uid="uid://ogolbe4cr4dk" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
+[ext_resource type="Texture2D" uid="uid://dt1nj7g68opvd" path="res://assets/tilesets/level1_floor.png" id="1_qvcpk"]
+[ext_resource type="Texture2D" uid="uid://1jkauo3ttphr" path="res://assets/tilesets/level1_sky.png" id="2_xi0ms"]
 [ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_lbnyv"]
 [ext_resource type="PackedScene" uid="uid://cmfrpqlcr1vws" path="res://scenes/mob.tscn" id="4_mkim1"]
-[ext_resource type="Texture2D" uid="uid://cdq8suwturjp1" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
+[ext_resource type="Texture2D" uid="uid://dbuwcqmu0gx0i" path="res://assets/character_sprites/portal_sprite_1.PNG" id="5_2et8h"]
 [ext_resource type="Script" path="res://player_movement.gd" id="6_dhlg7"]
 [ext_resource type="Texture2D" uid="uid://j80qq37kgg14" path="res://assets/character_sprites/portal_sprite_2.PNG" id="7_asnly"]
 [ext_resource type="Texture2D" uid="uid://brys623oly375" path="res://assets/character_sprites/player_sprite_1.png" id="7_ayfcc"]
@@ -27,6 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://c3t71ajub1f3s" path="res://assets/sound/lose1.wav" id="25_swhuf"]
 [ext_resource type="AudioStream" uid="uid://dtc3jlso0bs4b" path="res://assets/sound/music/bubbletheme.wav" id="26_8hq2p"]
 [ext_resource type="AudioStream" uid="uid://b5g504vtrc6v3" path="res://assets/sound/ouch.wav" id="26_gg37n"]
+[ext_resource type="PackedScene" uid="uid://chsf28pg5vgvo" path="res://hud.tscn" id="21_vnnll"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_suouw"]
 texture = ExtResource("1_qvcpk")
@@ -489,7 +490,7 @@ shape = SubResource("RectangleShape2D_y4ot2")
 position = Vector2(629, -6)
 shape = SubResource("RectangleShape2D_samh5")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(632, 176)
 texture = ExtResource("12_qxyaj")
 
@@ -531,6 +532,8 @@ stream = ExtResource("26_gg37n")
 [node name="Level_1_theme" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource("26_8hq2p")
 autoplay = true
+
+[node name="hud" parent="." instance=ExtResource("21_vnnll")]
 
 [connection signal="area_entered" from="Player/player_area" to="Player" method="_on_player_area_area_entered"]
 [connection signal="area_exited" from="Player/player_area" to="Player" method="_on_player_area_area_exited"]

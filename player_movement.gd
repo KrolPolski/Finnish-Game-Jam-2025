@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var health = 10
+@export var health = 4
 #@export var bubble_count = 0
 
 const SPEED = 200.0

@@ -9,6 +9,7 @@ func _ready() -> void:
 	global_position = spawn_pos
 	dir = 0
 	$'Timer'.start()
+	$AnimatedSprite2D.play("bubble_sprite")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

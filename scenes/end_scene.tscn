@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1365evn3r7qh"]
+
+[ext_resource type="Script" path="res://scenes/end_scene.gd" id="1_asy45"]
+[ext_resource type="FontFile" uid="uid://dkatdoixmwto8" path="res://assets/fonts/Pixica Fonts/Pixica-Bold.ttf" id="2_sj7rg"]
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_asy45")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.14902, 0.14902, 0.14902, 1)
+polygon = PackedVector2Array(0, 0, 0, 720, 1280, 720, 1280, 0)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Died_message" type="Label" parent="Label"]
+offset_left = 416.0
+offset_top = 187.0
+offset_right = 860.0
+offset_bottom = 471.0
+theme_override_fonts/font = ExtResource("2_sj7rg")
+theme_override_font_sizes/font_size = 48
+text = "Game over!
+
+Your final score was
+
+
+Press ENTER to try again
+or I for instructions"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 334.0
+offset_right = 672.0
+offset_bottom = 368.0
+theme_override_fonts/font = ExtResource("2_sj7rg")
+theme_override_font_sizes/font_size = 42
+text = "0"
