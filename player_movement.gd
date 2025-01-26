@@ -53,7 +53,8 @@ func _physics_process(delta: float) -> void:
 	if !is_climbing_up and !is_climbing_down:
 		$AnimatedSprite2D.play("player_movement")
 		var direction := Input.get_axis("move_left", "move_right")
-		print("Direction ", direction)
+		if direction == 0:
+			$AnimatedSprite2D.pause()
 		if direction:
 			velocity.x = direction * SPEED
 		else:
