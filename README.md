@@ -1,4 +1,5 @@
 # The Lab Incident
+### You can try the game live on [itch.io](https://rlboudwin.itch.io/the-lab-incident).
 ## About
 This game was built using the Godot game engine, for the Finnish Game Jam 2025, at the Helsinki Arabia site.
 
